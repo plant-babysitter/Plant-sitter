@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,25 +45,31 @@
             this.Button_set_info = new System.Windows.Forms.PictureBox();
             this.HeightChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.HumidityChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.ChartButton = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.BtnMonthChart = new System.Windows.Forms.Button();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.설정ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.식물정보변경ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.사진불러오기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.정보ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.파일내보내기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label6 = new System.Windows.Forms.Label();
+            this.currentDay = new System.Windows.Forms.Label();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.BtnWeekChart = new System.Windows.Forms.Button();
+            this.BtnTodayChart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Button_set_image)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Button_set_info)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HeightChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HumidityChart)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.menuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(78, 271);
+            this.label1.Location = new System.Drawing.Point(71, 322);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 15);
             this.label1.TabIndex = 3;
@@ -71,43 +78,47 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(78, 308);
+            this.label2.Location = new System.Drawing.Point(71, 359);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 15);
             this.label2.TabIndex = 5;
             this.label2.Text = "식물의 종";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(78, 323);
+            this.label3.Location = new System.Drawing.Point(71, 374);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 15);
             this.label3.TabIndex = 6;
             this.label3.Text = "목표 습도";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(78, 338);
+            this.label4.Location = new System.Drawing.Point(71, 389);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 15);
             this.label4.TabIndex = 7;
             this.label4.Text = "목표 온도";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(78, 353);
+            this.label5.Location = new System.Drawing.Point(71, 404);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 15);
             this.label5.TabIndex = 8;
             this.label5.Text = "펌프 주기";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // pictureBoxQ
             // 
             this.pictureBoxQ.Image = global::plant_sitter.Properties.Resources.basic;
-            this.pictureBoxQ.Location = new System.Drawing.Point(12, 45);
+            this.pictureBoxQ.Location = new System.Drawing.Point(74, 99);
             this.pictureBoxQ.Name = "pictureBoxQ";
             this.pictureBoxQ.Size = new System.Drawing.Size(149, 201);
             this.pictureBoxQ.TabIndex = 1;
@@ -116,7 +127,7 @@
             // Button_set_image
             // 
             this.Button_set_image.Image = global::plant_sitter.Properties.Resources.reset;
-            this.Button_set_image.Location = new System.Drawing.Point(167, 45);
+            this.Button_set_image.Location = new System.Drawing.Point(229, 99);
             this.Button_set_image.Name = "Button_set_image";
             this.Button_set_image.Size = new System.Drawing.Size(17, 23);
             this.Button_set_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -127,65 +138,67 @@
             // Button_set_info
             // 
             this.Button_set_info.Image = global::plant_sitter.Properties.Resources.reset;
-            this.Button_set_info.Location = new System.Drawing.Point(149, 271);
+            this.Button_set_info.Location = new System.Drawing.Point(142, 322);
             this.Button_set_info.Name = "Button_set_info";
             this.Button_set_info.Size = new System.Drawing.Size(17, 15);
             this.Button_set_info.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Button_set_info.TabIndex = 11;
             this.Button_set_info.TabStop = false;
+            this.Button_set_info.Click += new System.EventHandler(this.Button_set_info_Click);
             // 
             // HeightChart
             // 
-            chartArea13.Name = "ChartArea1";
-            this.HeightChart.ChartAreas.Add(chartArea13);
-            legend13.Name = "Legend1";
-            this.HeightChart.Legends.Add(legend13);
+            chartArea1.Name = "ChartArea1";
+            this.HeightChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.HeightChart.Legends.Add(legend1);
             this.HeightChart.Location = new System.Drawing.Point(422, 90);
             this.HeightChart.Name = "HeightChart";
-            series13.ChartArea = "ChartArea1";
-            series13.Legend = "Legend1";
-            series13.Name = "Series1";
-            this.HeightChart.Series.Add(series13);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.HeightChart.Series.Add(series1);
             this.HeightChart.Size = new System.Drawing.Size(433, 192);
             this.HeightChart.TabIndex = 13;
             this.HeightChart.Text = "chart1";
             // 
             // HumidityChart
             // 
-            chartArea14.Name = "ChartArea1";
-            this.HumidityChart.ChartAreas.Add(chartArea14);
-            legend14.Name = "Legend1";
-            this.HumidityChart.Legends.Add(legend14);
+            chartArea2.Name = "ChartArea1";
+            this.HumidityChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.HumidityChart.Legends.Add(legend2);
             this.HumidityChart.Location = new System.Drawing.Point(422, 308);
             this.HumidityChart.Name = "HumidityChart";
-            series14.ChartArea = "ChartArea1";
-            series14.Legend = "Legend1";
-            series14.Name = "Series1";
-            this.HumidityChart.Series.Add(series14);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.HumidityChart.Series.Add(series2);
             this.HumidityChart.Size = new System.Drawing.Size(433, 203);
             this.HumidityChart.TabIndex = 14;
             this.HumidityChart.Text = "chart2";
             // 
-            // ChartButton
+            // BtnMonthChart
             // 
-            this.ChartButton.Location = new System.Drawing.Point(780, 45);
-            this.ChartButton.Name = "ChartButton";
-            this.ChartButton.Size = new System.Drawing.Size(75, 39);
-            this.ChartButton.TabIndex = 15;
-            this.ChartButton.Text = "버튼";
-            this.ChartButton.UseVisualStyleBackColor = true;
-            this.ChartButton.Click += new System.EventHandler(this.ChartBtn_Click);
+            this.BtnMonthChart.Location = new System.Drawing.Point(780, 45);
+            this.BtnMonthChart.Name = "BtnMonthChart";
+            this.BtnMonthChart.Size = new System.Drawing.Size(75, 39);
+            this.BtnMonthChart.TabIndex = 15;
+            this.BtnMonthChart.Text = "한 달";
+            this.BtnMonthChart.UseVisualStyleBackColor = true;
+            this.BtnMonthChart.Click += new System.EventHandler(this.BtnMonth_Click);
             // 
-            // menuStrip1
+            // menuStrip
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStrip.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.설정ToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(941, 28);
-            this.menuStrip1.TabIndex = 16;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(941, 28);
+            this.menuStrip.TabIndex = 16;
+            this.menuStrip.Text = "menuStrip1";
             // 
             // 설정ToolStripMenuItem
             // 
@@ -195,7 +208,6 @@
             this.설정ToolStripMenuItem.Name = "설정ToolStripMenuItem";
             this.설정ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.설정ToolStripMenuItem.Text = "설정";
-            this.설정ToolStripMenuItem.Click += new System.EventHandler(this.설정ToolStripMenuItem_Click);
             // 
             // 식물정보변경ToolStripMenuItem
             // 
@@ -203,35 +215,82 @@
             this.사진불러오기ToolStripMenuItem,
             this.정보ToolStripMenuItem});
             this.식물정보변경ToolStripMenuItem.Name = "식물정보변경ToolStripMenuItem";
-            this.식물정보변경ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.식물정보변경ToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.식물정보변경ToolStripMenuItem.Text = "식물 정보 변경";
             // 
             // 사진불러오기ToolStripMenuItem
             // 
             this.사진불러오기ToolStripMenuItem.Name = "사진불러오기ToolStripMenuItem";
-            this.사진불러오기ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.사진불러오기ToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
             this.사진불러오기ToolStripMenuItem.Text = "사진 불러오기";
             // 
             // 정보ToolStripMenuItem
             // 
             this.정보ToolStripMenuItem.Name = "정보ToolStripMenuItem";
-            this.정보ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.정보ToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
             this.정보ToolStripMenuItem.Text = "기본정보 변경";
             this.정보ToolStripMenuItem.Click += new System.EventHandler(this.정보ToolStripMenuItem_Click);
             // 
             // 파일내보내기ToolStripMenuItem
             // 
             this.파일내보내기ToolStripMenuItem.Name = "파일내보내기ToolStripMenuItem";
-            this.파일내보내기ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.파일내보내기ToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.파일내보내기ToolStripMenuItem.Text = "파일 내보내기";
             this.파일내보내기ToolStripMenuItem.Click += new System.EventHandler(this.파일내보내기ToolStripMenuItem_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label6.Location = new System.Drawing.Point(23, 32);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(197, 38);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Plant Sitter";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // currentDay
+            // 
+            this.currentDay.AutoSize = true;
+            this.currentDay.Font = new System.Drawing.Font("굴림", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.currentDay.Location = new System.Drawing.Point(419, 50);
+            this.currentDay.Name = "currentDay";
+            this.currentDay.Size = new System.Drawing.Size(86, 17);
+            this.currentDay.TabIndex = 18;
+            this.currentDay.Text = "검색 기간";
+            // 
+            // BtnWeekChart
+            // 
+            this.BtnWeekChart.Location = new System.Drawing.Point(684, 45);
+            this.BtnWeekChart.Name = "BtnWeekChart";
+            this.BtnWeekChart.Size = new System.Drawing.Size(75, 39);
+            this.BtnWeekChart.TabIndex = 19;
+            this.BtnWeekChart.Text = "일주일";
+            this.BtnWeekChart.UseVisualStyleBackColor = true;
+            this.BtnWeekChart.Click += new System.EventHandler(this.BtnWeek_Click);
+            // 
+            // BtnTodayChart
+            // 
+            this.BtnTodayChart.Location = new System.Drawing.Point(590, 45);
+            this.BtnTodayChart.Name = "BtnTodayChart";
+            this.BtnTodayChart.Size = new System.Drawing.Size(75, 39);
+            this.BtnTodayChart.TabIndex = 20;
+            this.BtnTodayChart.Text = "당일";
+            this.BtnTodayChart.UseVisualStyleBackColor = true;
+            this.BtnTodayChart.Click += new System.EventHandler(this.BtnDay_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(941, 545);
-            this.Controls.Add(this.ChartButton);
+            this.Controls.Add(this.BtnTodayChart);
+            this.Controls.Add(this.BtnWeekChart);
+            this.Controls.Add(this.currentDay);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.BtnMonthChart);
             this.Controls.Add(this.HumidityChart);
             this.Controls.Add(this.HeightChart);
             this.Controls.Add(this.label5);
@@ -242,10 +301,10 @@
             this.Controls.Add(this.pictureBoxQ);
             this.Controls.Add(this.Button_set_image);
             this.Controls.Add(this.Button_set_info);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.menuStrip);
+            this.MainMenuStrip = this.menuStrip;
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Plant-Sitter";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Click += new System.EventHandler(this.Button_set_info1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQ)).EndInit();
@@ -253,8 +312,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.Button_set_info)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HeightChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HumidityChart)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,13 +331,18 @@
         private System.Windows.Forms.PictureBox Button_set_info;
         private System.Windows.Forms.DataVisualization.Charting.Chart HeightChart;
         private System.Windows.Forms.DataVisualization.Charting.Chart HumidityChart;
-        private System.Windows.Forms.Button ChartButton;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.Button BtnMonthChart;
+        private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem 설정ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 식물정보변경ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 사진불러오기ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 정보ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 파일내보내기ToolStripMenuItem;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label currentDay;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.Button BtnWeekChart;
+        private System.Windows.Forms.Button BtnTodayChart;
     }
 }
 
