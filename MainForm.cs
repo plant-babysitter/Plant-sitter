@@ -48,11 +48,6 @@ namespace plant_sitter
             imageChangeForm.ShowDialog();
         }
 
-        private void 정보ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void MainForm_Load(object sender, EventArgs e)
         {
             timeSlice = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 };
@@ -116,32 +111,7 @@ namespace plant_sitter
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Button_set_info_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
         {
 
         }
@@ -272,6 +242,23 @@ namespace plant_sitter
 
             HeightChart.Series["Height"].ChartType =
                 System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+        }
+
+        private void 사진불러오기ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //경로 미완성
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
+            openFileDialog.Title = "Select an Image File";
+            openFileDialog.ShowDialog();
+
+            if (openFileDialog.FileName != "")
+            {
+                string fileName = openFileDialog.FileName;
+                string currentDir = System.IO.Directory.GetCurrentDirectory();
+                string destFile = System.IO.Path.Combine("./Resources", System.IO.Path.GetFileName(fileName));
+                System.IO.File.Copy(fileName, destFile, true);
+            }
         }
     }
 

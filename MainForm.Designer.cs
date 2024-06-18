@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,7 +50,6 @@
             this.설정ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.식물정보변경ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.사진불러오기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.정보ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.파일내보내기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label6 = new System.Windows.Forms.Label();
             this.currentDay = new System.Windows.Forms.Label();
@@ -83,7 +82,6 @@
             this.label2.Size = new System.Drawing.Size(72, 15);
             this.label2.TabIndex = 5;
             this.label2.Text = "식물의 종";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -93,7 +91,6 @@
             this.label3.Size = new System.Drawing.Size(72, 15);
             this.label3.TabIndex = 6;
             this.label3.Text = "목표 습도";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -103,7 +100,6 @@
             this.label4.Size = new System.Drawing.Size(72, 15);
             this.label4.TabIndex = 7;
             this.label4.Text = "목표 온도";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -113,7 +109,6 @@
             this.label5.Size = new System.Drawing.Size(72, 15);
             this.label5.TabIndex = 8;
             this.label5.Text = "펌프 주기";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // pictureBoxQ
             // 
@@ -148,32 +143,32 @@
             // 
             // HeightChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.HeightChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.HeightChart.Legends.Add(legend1);
+            chartArea13.Name = "ChartArea1";
+            this.HeightChart.ChartAreas.Add(chartArea13);
+            legend13.Name = "Legend1";
+            this.HeightChart.Legends.Add(legend13);
             this.HeightChart.Location = new System.Drawing.Point(422, 90);
             this.HeightChart.Name = "HeightChart";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.HeightChart.Series.Add(series1);
+            series13.ChartArea = "ChartArea1";
+            series13.Legend = "Legend1";
+            series13.Name = "Series1";
+            this.HeightChart.Series.Add(series13);
             this.HeightChart.Size = new System.Drawing.Size(433, 192);
             this.HeightChart.TabIndex = 13;
             this.HeightChart.Text = "chart1";
             // 
             // HumidityChart
             // 
-            chartArea2.Name = "ChartArea1";
-            this.HumidityChart.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.HumidityChart.Legends.Add(legend2);
+            chartArea14.Name = "ChartArea1";
+            this.HumidityChart.ChartAreas.Add(chartArea14);
+            legend14.Name = "Legend1";
+            this.HumidityChart.Legends.Add(legend14);
             this.HumidityChart.Location = new System.Drawing.Point(422, 308);
             this.HumidityChart.Name = "HumidityChart";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.HumidityChart.Series.Add(series2);
+            series14.ChartArea = "ChartArea1";
+            series14.Legend = "Legend1";
+            series14.Name = "Series1";
+            this.HumidityChart.Series.Add(series14);
             this.HumidityChart.Size = new System.Drawing.Size(433, 203);
             this.HumidityChart.TabIndex = 14;
             this.HumidityChart.Text = "chart2";
@@ -212,24 +207,17 @@
             // 식물정보변경ToolStripMenuItem
             // 
             this.식물정보변경ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.사진불러오기ToolStripMenuItem,
-            this.정보ToolStripMenuItem});
+            this.사진불러오기ToolStripMenuItem});
             this.식물정보변경ToolStripMenuItem.Name = "식물정보변경ToolStripMenuItem";
-            this.식물정보변경ToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
+            this.식물정보변경ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.식물정보변경ToolStripMenuItem.Text = "식물 정보 변경";
             // 
             // 사진불러오기ToolStripMenuItem
             // 
             this.사진불러오기ToolStripMenuItem.Name = "사진불러오기ToolStripMenuItem";
-            this.사진불러오기ToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
+            this.사진불러오기ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.사진불러오기ToolStripMenuItem.Text = "사진 불러오기";
-            // 
-            // 정보ToolStripMenuItem
-            // 
-            this.정보ToolStripMenuItem.Name = "정보ToolStripMenuItem";
-            this.정보ToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
-            this.정보ToolStripMenuItem.Text = "기본정보 변경";
-            this.정보ToolStripMenuItem.Click += new System.EventHandler(this.정보ToolStripMenuItem_Click);
+            this.사진불러오기ToolStripMenuItem.Click += new System.EventHandler(this.사진불러오기ToolStripMenuItem_Click);
             // 
             // 파일내보내기ToolStripMenuItem
             // 
@@ -248,7 +236,6 @@
             this.label6.Size = new System.Drawing.Size(197, 38);
             this.label6.TabIndex = 17;
             this.label6.Text = "Plant Sitter";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // currentDay
             // 
@@ -336,7 +323,6 @@
         private System.Windows.Forms.ToolStripMenuItem 설정ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 식물정보변경ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 사진불러오기ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 정보ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 파일내보내기ToolStripMenuItem;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label currentDay;
