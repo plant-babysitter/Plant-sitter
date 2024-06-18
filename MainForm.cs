@@ -226,7 +226,6 @@ namespace plant_sitter
 
         private void BtnMonth_Click(object sender, EventArgs e)
         {
-            //BtnWeek_Click과 비슷한 모양이 그려지도록 데이터를 새로 만드어줘
             timeSlice = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
             humidity = new double[] { 46, 30, 56, 64, 51, 62, 51, 41, 65, 48, 56, 64, 52 };
             height = new double[] { 0, 2, 2.4, 5, 6, 7.3, 9, 12, 13.8, 14.2, 16.5, 19, 20 };
