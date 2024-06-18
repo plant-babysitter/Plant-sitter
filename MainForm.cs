@@ -268,9 +268,36 @@ namespace plant_sitter
 
         private void 사진불러오기ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //이미지 파일 불러와서 현재 폴더에 저장
 
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG|All files (*.*)|*.*";
+            openFileDialog.Title = "Select an Image File";
+            openFileDialog.ShowDialog();
+
+            //이미지를 Application.StartupPath에 저장
+            if (openFileDialog.FileName != "")
+            {
+                string imagePath = openFileDialog.FileName;
+                string fileName = Path.GetFileName(imagePath);
+                string destPath = Path.Combine(Application.StartupPath, fileName);
+                File.Copy(imagePath, destPath, true);
+
+                //이미지를 pictureBoxQ에 띄워줌
+                if (File.Exists(destPath))
+                {
+                    pictureBoxQ.Image = Image.FromFile(destPath);
+                    Properties.Settings.Default.PlantImagePath = destPath;
+                    Properties.Settings.Default.Save();
+                }
+                else
+                {
+                    MessageBox.Show("Image file does not exist: " + destPath);
+                }
+            }
         }
+    }
 
     }
 
-}
+

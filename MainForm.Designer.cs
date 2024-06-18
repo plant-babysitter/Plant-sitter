@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -116,6 +116,7 @@
             this.pictureBoxQ.Location = new System.Drawing.Point(74, 99);
             this.pictureBoxQ.Name = "pictureBoxQ";
             this.pictureBoxQ.Size = new System.Drawing.Size(149, 201);
+            this.pictureBoxQ.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxQ.TabIndex = 1;
             this.pictureBoxQ.TabStop = false;
             // 
@@ -143,32 +144,32 @@
             // 
             // HeightChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.HeightChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.HeightChart.Legends.Add(legend1);
+            chartArea5.Name = "ChartArea1";
+            this.HeightChart.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.HeightChart.Legends.Add(legend5);
             this.HeightChart.Location = new System.Drawing.Point(422, 90);
             this.HeightChart.Name = "HeightChart";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.HeightChart.Series.Add(series1);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.HeightChart.Series.Add(series5);
             this.HeightChart.Size = new System.Drawing.Size(433, 192);
             this.HeightChart.TabIndex = 13;
             this.HeightChart.Text = "chart1";
             // 
             // HumidityChart
             // 
-            chartArea2.Name = "ChartArea1";
-            this.HumidityChart.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.HumidityChart.Legends.Add(legend2);
+            chartArea6.Name = "ChartArea1";
+            this.HumidityChart.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.HumidityChart.Legends.Add(legend6);
             this.HumidityChart.Location = new System.Drawing.Point(422, 308);
             this.HumidityChart.Name = "HumidityChart";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.HumidityChart.Series.Add(series2);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.HumidityChart.Series.Add(series6);
             this.HumidityChart.Size = new System.Drawing.Size(433, 203);
             this.HumidityChart.TabIndex = 14;
             this.HumidityChart.Text = "chart2";
@@ -209,14 +210,14 @@
             this.식물정보변경ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.사진불러오기ToolStripMenuItem});
             this.식물정보변경ToolStripMenuItem.Name = "식물정보변경ToolStripMenuItem";
-            this.식물정보변경ToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
+            this.식물정보변경ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.식물정보변경ToolStripMenuItem.Text = "식물 정보 변경";
             // 
             // 사진불러오기ToolStripMenuItem
             // 
             this.사진불러오기ToolStripMenuItem.Name = "사진불러오기ToolStripMenuItem";
-            this.사진불러오기ToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
-            this.사진불러오기ToolStripMenuItem.Text = "사진 불러오기";
+            this.사진불러오기ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.사진불러오기ToolStripMenuItem.Text = "외부 사진 불러오기";
             this.사진불러오기ToolStripMenuItem.Click += new System.EventHandler(this.사진불러오기ToolStripMenuItem_Click);
             // 
             // 파일내보내기ToolStripMenuItem
