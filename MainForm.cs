@@ -246,19 +246,7 @@ namespace plant_sitter
 
         private void 사진불러오기ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //경로 미완성
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
-            openFileDialog.Title = "Select an Image File";
-            openFileDialog.ShowDialog();
-
-            if (openFileDialog.FileName != "")
-            {
-                string fileName = openFileDialog.FileName;
-                string currentDir = System.IO.Directory.GetCurrentDirectory();
-                string destFile = System.IO.Path.Combine("./Resources", System.IO.Path.GetFileName(fileName));
-                System.IO.File.Copy(fileName, destFile, true);
-            }
+            
         }
     }
 
