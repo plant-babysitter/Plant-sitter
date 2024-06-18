@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace plant_sitter
 {
@@ -18,7 +19,7 @@ namespace plant_sitter
         double[] sunshine = { 0 };
         double[] temperature = { 0 };
         double[] waterPerSe = { 0 };
-    
+
         DateTime now = DateTime.Now;
 
 
@@ -27,21 +28,41 @@ namespace plant_sitter
             InitializeComponent();
             currentDay.Text = now.ToString("yyyy-MM-dd");
             InitializeCustomComponents();
+            LoadSettings();
 
+        }
+
+        private void LoadSettings()
+        {
+            label1.Text = Properties.Settings.Default.Label1Text;
+            label2.Text = Properties.Settings.Default.Label2Text;
+            label3.Text = Properties.Settings.Default.Label3Text;
+            label4.Text = Properties.Settings.Default.Label4Text;
+            label5.Text = Properties.Settings.Default.Label5Text;
+
+            string imagePath = Properties.Settings.Default.PlantImagePath;
+            if (!string.IsNullOrEmpty(imagePath))
+            {
+                // 디버깅 코드
+
+
+                if (File.Exists(imagePath))
+                {
+                    pictureBoxQ.Image = Image.FromFile(imagePath);
+                }
+                else
+                {
+                    MessageBox.Show("Image file does not exist: " + imagePath);
+                }
+            }
         }
 
         private void InitializeCustomComponents()
         {
-            
+
         }
 
-        private void Button_set_info1(object sender, EventArgs e)
-        {
-            InfoChangeForm infoChangeForm = new InfoChangeForm(label1, label2, label3, label4, label5);
-            infoChangeForm.ShowDialog();
-        }
 
-   
         private void Button_set_image1(object sender, EventArgs e)
         {
             ImageChangeForm imageChangeForm = new ImageChangeForm(pictureBoxQ);
@@ -113,7 +134,8 @@ namespace plant_sitter
 
         private void Button_set_info_Click(object sender, EventArgs e)
         {
-
+            InfoChangeForm infoChangeForm = new InfoChangeForm(label1, label2, label3, label4, label5);
+            infoChangeForm.ShowDialog();
         }
 
         private void BtnDay_Click(object sender, EventArgs e)
@@ -121,7 +143,7 @@ namespace plant_sitter
             timeSlice = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 };
             humidity = new double[] { 25, 30, 56, 78, 82, 90, 80, 77, 56, 50, 40, 48 };
             height = new double[] { 10, 11, 12.5, 13, 13.8, 14, 15, 17, 17.5, 19, 19.3, 20 };
-            
+
             HumidityChart.Series.Clear();
             HumidityChart.Series.Add("Humidity");
             HumidityChart.ChartAreas[0].AxisY.Maximum = 100;
@@ -160,7 +182,7 @@ namespace plant_sitter
 
         private void BtnWeek_Click(object sender, EventArgs e)
         {
-            
+
             timeSlice = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23 };
             humidity = new double[] { 46, 30, 56, 78, 82, 54, 80, 77, 56, 50, 64, 48, 59, 62, 70, 80, 73, 64, 70, 62, 51, 41, 65, 48 };
             height = new double[] { 5, 5.6, 5.8, 6.7, 7, 7.3, 8, 8.2, 9, 9.5, 10, 11, 12.5, 13, 13.8, 14, 15, 17, 17.5, 19, 19.3, 20 };
@@ -206,8 +228,8 @@ namespace plant_sitter
         {
             //BtnWeek_Click과 비슷한 모양이 그려지도록 데이터를 새로 만드어줘
             timeSlice = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-            humidity = new double[] { 46, 30, 56, 64, 51,  62, 51, 41, 65, 48, 56, 64, 52 };
-            height = new double[] { 0, 2, 2.4, 5, 6, 7.3, 9, 12, 13.8, 14.2, 16.5, 19, 20};
+            humidity = new double[] { 46, 30, 56, 64, 51, 62, 51, 41, 65, 48, 56, 64, 52 };
+            height = new double[] { 0, 2, 2.4, 5, 6, 7.3, 9, 12, 13.8, 14.2, 16.5, 19, 20 };
 
             HumidityChart.Series.Clear();
             HumidityChart.Series.Add("Humidity");
@@ -246,8 +268,9 @@ namespace plant_sitter
 
         private void 사진불러오기ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
+
     }
 
 }

@@ -20,5 +20,23 @@
     <Setting Name="TargetHumidity" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="Label1Text" Type="System.String" Scope="User">
+      <Value Profile="(Default)">식물 이름</Value>
+    </Setting>
+    <Setting Name="Label2Text" Type="System.String" Scope="User">
+      <Value Profile="(Default)">식물의 종</Value>
+    </Setting>
+    <Setting Name="Label3Text" Type="System.String" Scope="User">
+      <Value Profile="(Default)">목표 습도</Value>
+    </Setting>
+    <Setting Name="Label4Text" Type="System.String" Scope="User">
+      <Value Profile="(Default)">목표 온도</Value>
+    </Setting>
+    <Setting Name="Label5Text" Type="System.String" Scope="User">
+      <Value Profile="(Default)">펌프 주기</Value>
+    </Setting>
+    <Setting Name="Label6Text" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

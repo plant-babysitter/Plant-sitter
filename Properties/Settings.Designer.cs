@@ -12,7 +12,7 @@ namespace plant_sitter.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.2.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.9.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -92,6 +92,78 @@ namespace plant_sitter.Properties {
             }
             set {
                 this["TargetHumidity"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("식물 이름")]
+        public string Label1Text {
+            get {
+                return ((string)(this["Label1Text"]));
+            }
+            set {
+                this["Label1Text"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("식물의 종")]
+        public string Label2Text {
+            get {
+                return ((string)(this["Label2Text"]));
+            }
+            set {
+                this["Label2Text"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("목표 습도")]
+        public string Label3Text {
+            get {
+                return ((string)(this["Label3Text"]));
+            }
+            set {
+                this["Label3Text"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("목표 온도")]
+        public string Label4Text {
+            get {
+                return ((string)(this["Label4Text"]));
+            }
+            set {
+                this["Label4Text"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("펌프 주기")]
+        public string Label5Text {
+            get {
+                return ((string)(this["Label5Text"]));
+            }
+            set {
+                this["Label5Text"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Label6Text {
+            get {
+                return ((string)(this["Label6Text"]));
+            }
+            set {
+                this["Label6Text"] = value;
             }
         }
     }

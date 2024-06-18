@@ -37,7 +37,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "InfoChangeForm";
             this.Text = "Form3";
-          
+            this.Load += new System.EventHandler(this.InfoChangeForm_Load);
             this.ResumeLayout(false);
 
         }

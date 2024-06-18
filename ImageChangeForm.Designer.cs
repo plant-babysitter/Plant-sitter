@@ -39,6 +39,7 @@
             // 
             this.ClientSize = new System.Drawing.Size(782, 453);
             this.Name = "ImageChangeForm";
+            this.Load += new System.EventHandler(this.ImageChangeForm_Load);
             this.ResumeLayout(false);
 
         }
